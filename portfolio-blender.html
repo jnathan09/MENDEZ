@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Blender Projects</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Me.css">
+
+  <style>
+  body {
+    padding-top: 70px; /* spacing for fixed navbar */
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox close (X) button */
+  .lb-data .lb-close {
+    width: 40px !important;
+    height: 40px !important;
+    opacity: 1 !important;
+    right: 20px !important;
+    top: 20px !important;
+    position: absolute !important;
+    background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/close.png') no-repeat center !important;
+    background-size: contain !important;
+  }
+
+  /* Lightbox navigation arrows */
+  .lb-nav a.lb-prev,
+  .lb-nav a.lb-next {
+    opacity: 1 !important;
+    width: 60px !important;
+    height: 60px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  .lb-nav a.lb-prev {
+    left: 20px !important;
+    background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/prev.png') no-repeat center !important;
+    background-size: contain !important;
+  }
+
+  .lb-nav a.lb-next {
+    right: 20px !important;
+    background: url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/next.png') no-repeat center !important;
+    background-size: contain !important;
+  }
+
+  /* Project navigation */
+  .project-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+
+  .project-nav a {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.25);
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background .25s ease, border-color .25s ease;
+  }
+
+  .project-nav a:hover {
+    background: #111;
+    border-color: #fff;
+  }
+</style>
+
+</head>
+<body class="bg-dark text-white">
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="Me.html">jnmdz.io</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="Me.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#instagram">Instagram</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="Me.html#contact" class="btn btn-outline-light btn-sm">Contact</a>
+    </div>
+  </div>
+</nav>
+
+  <!-- Blender Projects -->
+  <div class="container py-5">
+    <h2 class="mb-4">3D Blender Projects</h2>
+    <p class="mb-4">Here are some of my Blender renders and artworks.</p>
+
+    <div class="row g-4 gallery">
+      <div class="col-md-4">
+        <a href="assets/REN1.png" data-lightbox="blender" data-title="Blender Render 1">
+          <img src="assets/REN1.png" class="img-fluid shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="assets/REN2.png" data-lightbox="blender" data-title="Blender Render 2">
+          <img src="assets/REN2.png" class="img-fluid shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="assets/REN3.png" data-lightbox="blender" data-title="Blender Render 3">
+          <img src="assets/REN3.png" class="img-fluid shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="blender4.jpg" data-lightbox="blender" data-title="Blender Render 4">
+          <img src="blender4.jpg" class="img-fluid shadow">
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="blender5.jpg" data-lightbox="blender" data-title="Blender Render 5">
+          <img src="blender5.jpg" class="img-fluid shadow">
+        </a>
+      </div>
+    </div>
+
+    <!-- Next project navigation -->
+    <div class="project-nav">
+      <a href="portfolio-movie.html">Next Project →</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <script>
+    lightbox.option({
+      resizeDuration: 200,
+      wrapAround: true,
+      alwaysShowNavOnTouchDevices: true
+    })
+  </script>
+
+</body>
+</html>

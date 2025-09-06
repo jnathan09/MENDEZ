@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Design Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Me.css">
+  <style>
+    body { padding-top: 70px; }
+    .gallery img { width:100%; height:400px; object-fit:cover; border-radius:8px; transition:.3s; }
+    .gallery img:hover { transform:scale(1.05); }
+
+    /* Lightbox controls */
+    .lb-data .lb-close {
+      width:40px!important; height:40px!important;
+      right:20px!important; top:20px!important;
+      position:absolute!important;
+      background:url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/close.png') no-repeat center!important;
+      background-size:contain!important;
+      opacity:1!important;
+    }
+    .lb-nav a.lb-prev, .lb-nav a.lb-next {
+      opacity:1!important; width:60px!important; height:60px!important;
+      top:50%!important; transform:translateY(-50%)!important;
+    }
+    .lb-nav a.lb-prev {
+      left:20px!important;
+      background:url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/prev.png') no-repeat center!important;
+      background-size:contain!important;
+    }
+    .lb-nav a.lb-next {
+      right:20px!important;
+      background:url('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/images/next.png') no-repeat center!important;
+      background-size:contain!important;
+    }
+
+    /* Project nav buttons */
+    .project-nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:40px;
+      gap:10px;
+    }
+    .project-nav a {
+      color:#fff;
+      border:1px solid rgba(255,255,255,.25);
+      padding:8px 14px;
+      border-radius:8px;
+      text-decoration:none;
+      font-size:0.9rem;
+      transition:background .25s ease, border-color .25s ease;
+    }
+    .project-nav a:hover {
+      background:#111;
+      border-color:#fff;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="Me.html">jnmdz.io</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="Me.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="Me.html#instagram">Instagram</a></li>
+      </ul>
+    </div>
+    <div><a href="Me.html#contact" class="btn btn-outline-light btn-sm">Contact</a></div>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="container py-5">
+  <h2 class="mb-4">Sports Design Projects</h2>
+  <p class="mb-4">Sports-inspired posters, graphics, and promotional layouts showcasing energy and action.</p>
+
+  <div class="row g-4 gallery">
+    <div class="col-md-4"><a href="assets/SPO1.jpg" data-lightbox="sports" data-title="Sports Design 1"><img src="assets/SPO1.jpg" class="img-fluid shadow"></a></div>
+    <div class="col-md-4"><a href="assets/sports2.jpg" data-lightbox="sports" data-title="Sports Design 2"><img src="assets/sports2.jpg" class="img-fluid shadow"></a></div>
+    <div class="col-md-4"><a href="assets/sports3.png" data-lightbox="sports" data-title="Sports Design 3"><img src="assets/sports3.png" class="img-fluid shadow"></a></div>
+    <div class="col-md-4"><a href="assets/sports4.jpg" data-lightbox="sports" data-title="Sports Design 4"><img src="assets/sports4.jpg" class="img-fluid shadow"></a></div>
+    <div class="col-md-4"><a href="assets/sports1.jpg" data-lightbox="sports" data-title="Sports Design 5"><img src="assets/sports1.jpg" class="img-fluid shadow"></a></div>
+  </div>
+
+  <!-- Project navigation -->
+  <div class="project-nav">
+    <a href="portfolio-ads.html">← Previous Project</a>
+    <a href="portfolio-futuristic.html">Next Project →</a>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script>
+  lightbox.option({
+    resizeDuration:200,
+    wrapAround:true,
+    alwaysShowNavOnTouchDevices:true
+  })
+</script>
+
+</body>
+</html>
