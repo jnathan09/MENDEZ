@@ -17,13 +17,35 @@
     body { padding-top: 70px; }
     .gallery img {
       width: 100%;
-      height: 400px;
-      object-fit: cover;
+      height: 500px;
+      object-fit: cover ;
       border-radius: 8px;
       cursor: pointer;
       transition: transform .3s;
     }
     .gallery img:hover { transform: scale(1.05); }
+
+     /* Project navigation */
+    .project-nav {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+    }
+
+    .project-nav a {
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.25);
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background .25s ease, border-color .25s ease;
+    }
+
+    .project-nav a:hover {
+      background: #111;
+      border-color: #fff;
+    }
 
     /* Fullscreen modal */
     .img-modal {
@@ -87,10 +109,11 @@
         
         <!-- Center links -->
         <ul class="navbar-nav mx-lg-auto text-center">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#instagram">Instagram</a></li>
+          
         </ul>
 
         <!-- Right contact -->
@@ -127,11 +150,10 @@
     <div class="col-md-4"><img src="assets/FUTU6.jpg" alt="Futuristic 5"></div>
   </div>
 
-  <!-- Project navigation -->
-  <div class="project-nav d-flex justify-content-between mt-4">
-    <a href="portfolio-sports.html" class="btn btn-outline-light">← Previous Project</a>
-    
-  </div>
+  <!-- Next project navigation -->
+    <div class="project-nav">
+     <a href="portfolio-movie.html">Next Project →</a>
+    </div>
 </div>
 
 <!-- Fullscreen Modal -->
