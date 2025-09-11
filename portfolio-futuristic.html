@@ -25,6 +25,12 @@
     }
     .gallery img:hover { transform: scale(1.05); }
 
+    .navbar-nav .nav-link.active {
+  color: #468A9A !important;
+  font-weight: 600;
+}
+
+
      /* Project navigation */
     .project-nav {
       display: flex;
@@ -107,14 +113,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="d-lg-flex justify-content-between w-100 align-items-center">
         
-        <!-- Center links -->
-        <ul class="navbar-nav mx-lg-auto text-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
-          
-        </ul>
+                
+             <!-- Center links -->
+      <ul class="navbar-nav mx-lg-auto text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Portfolio</a></li>
+      </ul>
 
         <!-- Right contact -->
         <ul class="navbar-nav mt-3 mt-lg-0">
@@ -203,6 +209,14 @@
     if (e.key === "ArrowRight") showNext();
     if (e.key === "ArrowLeft") showPrev();
   });
+
+  const links = document.querySelectorAll(".navbar-nav .nav-link");
+  const currentPage = window.location.pathname;
+
+  // Kung nasa kahit anong portfolio page (e.g. portfolio-ads.html, portfolio-logos.html)
+  if (currentPage.includes("portfolio") && !currentPage.includes("index.html")) {
+    document.querySelector(".navbar-nav .portfolio-link")?.classList.add("active");
+  }
 </script>
 
 
