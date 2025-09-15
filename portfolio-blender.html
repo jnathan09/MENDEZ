@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Blender Projects</title>
+  <title>Blender 3D Projects</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Me.css">
 
   <style>
-    body {
+     body {
       padding-top: 70px; /* spacing for fixed navbar */
     }
 
@@ -146,23 +147,45 @@
 </head>
 <body class="bg-black text-white">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">jnmdz</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand" href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank">jnmdz</a>
+
+    <!-- Hamburger -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="d-lg-flex justify-content-between w-100 align-items-center">
+        
+        <!-- Center links -->
         <ul class="navbar-nav mx-lg-auto text-center">
           <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Projects</a></li>
         </ul>
+
+        <!-- Right contact -->
+        <ul class="navbar-nav mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a href="index.html#contact" class="nav-link" 
+               style="color: white; text-decoration: none; transition: color 0.3s;"
+               onmouseover="this.style.color='#468A9A';" 
+               onmouseout="this.style.color='white';">
+              Contact
+            </a>
+          </li>
+        </ul>
+
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Blender Projects Gallery -->
   <div class="container py-5">
