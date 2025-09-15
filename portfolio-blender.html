@@ -20,6 +20,7 @@
       padding-top: 70px; /* spacing for fixed navbar */
     }
 
+    /* Gallery thumbnails (images & video thumbs) */
     .gallery img {
       width: 100%;
       height: 350px;
@@ -28,16 +29,29 @@
       transition: transform 0.3s ease;
       cursor: pointer;
     }
-
     .gallery img:hover {
       transform: scale(1.05);
     }
 
-    .navbar-nav .nav-link.active {
-  color: #468A9A !important;
-  font-weight: 600;
-}
+    /* Video thumbnail wrapper */
+    .video-wrapper {
+      position: relative;
+    }
+    .video-wrapper .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: white;
+      opacity: 0.85;
+      pointer-events: none;
+    }
 
+    .navbar-nav .nav-link.active {
+      color: #468A9A !important;
+      font-weight: 600;
+    }
 
     /* Project navigation */
     .project-nav {
@@ -45,7 +59,6 @@
       justify-content: flex-end;
       margin-top: 40px;
     }
-
     .project-nav a {
       color: #fff;
       border: 1px solid rgba(255,255,255,.25);
@@ -55,7 +68,6 @@
       font-size: 0.9rem;
       transition: background .25s ease, border-color .25s ease;
     }
-
     .project-nav a:hover {
       background: #111;
       border-color: #fff;
@@ -66,16 +78,26 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.95);
       justify-content: center;
       align-items: center;
       z-index: 9999;
       flex-direction: column;
     }
+
+    /* Image style */
     .img-modal img {
       max-width: 90%;
       max-height: 80vh;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    /* Video style (like Drive player) */
+    .img-modal video {
+      width: 90%;
+      height: 80vh;
+      background: #000;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
     }
@@ -90,6 +112,7 @@
       cursor: pointer;
       user-select: none;
       transition: opacity 0.2s;
+      z-index: 10000;
     }
     .modal-close {
       top: 20px;
@@ -107,48 +130,44 @@
 <body class="bg-black text-white">
 
   <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-  <div class="container-fluid">
-    <!-- Brand -->
-    <a class="navbar-brand" href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank">jnmdz</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+    <div class="container-fluid">
+      <!-- Brand -->
+      <a class="navbar-brand" href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank">jnmdz</a>
 
-    <!-- Hamburger -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <div class="d-lg-flex justify-content-between w-100 align-items-center">
-            
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="d-lg-flex justify-content-between w-100 align-items-center">
               
-           <!-- Center links -->
-    <ul class="navbar-nav mx-lg-auto text-center">
-      <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-      <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Projects</a></li>
-    </ul>
+          <!-- Center links -->
+          <ul class="navbar-nav mx-lg-auto text-center">
+            <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Projects</a></li>
+          </ul>
 
-        <!-- Right contact -->
-        <ul class="navbar-nav mt-3 mt-lg-0">
-          <li class="nav-item">
-            <a href="index.html#contact" class="nav-link" 
-               style="color: white; text-decoration: none; transition: color 0.3s;"
-               onmouseover="this.style.color='#468A9A';" 
-               onmouseout="this.style.color='white';">
-              Contact
-            </a>
-          </li>
-        </ul>
+          <!-- Right contact -->
+          <ul class="navbar-nav mt-3 mt-lg-0">
+            <li class="nav-item">
+              <a href="index.html#contact" class="nav-link" 
+                 style="color: white; text-decoration: none; transition: color 0.3s;"
+                 onmouseover="this.style.color='#468A9A';" 
+                 onmouseout="this.style.color='white';">
+                Contact
+              </a>
+            </li>
+          </ul>
 
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-
-
-
+  </nav>
 
   <!-- Blender Projects -->
   <div class="container py-5">
@@ -159,13 +178,20 @@
       <div class="col-md-4"><img src="assets/REN1.png" alt="Blender Render 1"></div>
       <div class="col-md-4"><img src="assets/REN2.png" alt="Blender Render 2"></div>
       <div class="col-md-4"><img src="assets/REN3.png" alt="Blender Render 3"></div>
-    <!--  <div class="col-md-4"><img src="assets/blender4.jpg" alt="Blender Render 4"></div>
-      <div class="col-md-4"><img src="assets/blender5.jpg" alt="Blender Render 5"></div> -->
+
+      <!-- Video thumbnail with play icon -->
+      <div class="col-md-4">
+        <div class="video-wrapper">
+          <img src="assets/REN1.png" alt="Blender Video" class="video-thumb"
+               data-video="assets/DONATHAN.mp4">
+          <span class="play-icon">▶</span>
+        </div>
+      </div>
     </div>
 
     <!-- Next project navigation -->
     <div class="project-nav">
-      <a href="portfolio-sports.html">← Previous  Project </a>
+      <a href="portfolio-sports.html">← Previous Project</a>
     </div>
   </div>
 
@@ -174,6 +200,9 @@
     <span class="modal-close" id="modalClose">✕</span>
     <span class="modal-prev" id="modalPrev">‹</span>
     <img id="modalImage" src="" alt="Preview">
+    <video id="modalVideo" controls style="display:none;">
+      <source src="" type="video/mp4">
+    </video>
     <span class="modal-next" id="modalNext">›</span>
   </div>
 
@@ -183,35 +212,55 @@
   <script>
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImage");
+    const modalVideo = document.getElementById("modalVideo");
     const closeBtn = document.getElementById("modalClose");
     const nextBtn = document.getElementById("modalNext");
     const prevBtn = document.getElementById("modalPrev");
-    const images = document.querySelectorAll(".gallery img");
+    const items = document.querySelectorAll(".gallery img");
 
     let currentIndex = 0;
 
     function openModal(index) {
       currentIndex = index;
-      modalImg.src = images[index].src;
+      const item = items[index];
+      const videoSrc = item.dataset.video;
+
+      if (videoSrc) {
+        // Show video
+        modalImg.style.display = "none";
+        modalVideo.style.display = "block";
+        modalVideo.querySelector("source").src = videoSrc;
+        modalVideo.load();
+        modalVideo.play(); // autoplay (optional)
+      } else {
+        // Show image
+        modalVideo.pause();
+        modalVideo.style.display = "none";
+        modalImg.style.display = "block";
+        modalImg.src = item.src;
+      }
+
       modal.style.display = "flex";
     }
 
     function closeModal() {
       modal.style.display = "none";
+      modalVideo.pause(); // stop video pag close
+      modalVideo.currentTime = 0; // reset to start
     }
 
     function showNext() {
-      currentIndex = (currentIndex + 1) % images.length;
-      modalImg.src = images[currentIndex].src;
+      currentIndex = (currentIndex + 1) % items.length;
+      openModal(currentIndex);
     }
 
     function showPrev() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      modalImg.src = images[currentIndex].src;
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      openModal(currentIndex);
     }
 
-    images.forEach((img, index) => {
-      img.addEventListener("click", () => openModal(index));
+    items.forEach((item, index) => {
+      item.addEventListener("click", () => openModal(index));
     });
 
     closeBtn.addEventListener("click", closeModal);
@@ -225,17 +274,11 @@
       if (e.key === "ArrowLeft") showPrev();
     });
 
-    const links = document.querySelectorAll(".navbar-nav .nav-link");
-  const currentPage = window.location.pathname;
-
-  // Kung nasa kahit anong portfolio page (e.g. portfolio-ads.html, portfolio-logos.html)
-  if (currentPage.includes("portfolio") && !currentPage.includes("index.html")) {
-    document.querySelector(".navbar-nav .portfolio-link")?.classList.add("active");
-  }
+    // Navbar active state
+    const currentPage = window.location.pathname;
+    if (currentPage.includes("portfolio") && !currentPage.includes("index.html")) {
+      document.querySelector(".navbar-nav .portfolio-link")?.classList.add("active");
+    }
   </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-  
 </body>
 </html>
