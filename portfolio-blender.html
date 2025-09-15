@@ -9,16 +9,32 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
 
-  <!-- Bootstrap -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="Me.css">
 
   <style>
     body {
       padding-top: 70px; /* spacing for fixed navbar */
     }
+
+    /* Video thumbnail wrapper */
+.video-wrapper {
+  position: relative;
+}
+.video-wrapper .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid white;       /* kulay ng arrow */
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
 
     /* Gallery thumbnails (images & video thumbs) */
     .gallery img {
@@ -93,16 +109,17 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
     }
 
-    /* Video style (like Drive player) */
-    .img-modal video {
+    /* Drive embed style (iframe) */
+    .img-modal iframe {
       width: 90%;
       height: 80vh;
-      background: #000;
+      border: none;
       border-radius: 8px;
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      background: #000;
     }
 
-    /* Controls */
+    /* Controls (close, prev, next) */
     .modal-close, .modal-prev, .modal-next {
       position: absolute;
       top: 50%;
@@ -132,64 +149,59 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
     <div class="container-fluid">
-      <!-- Brand -->
-      <a class="navbar-brand" href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank">jnmdz</a>
-
-      <!-- Hamburger -->
+      <a class="navbar-brand" href="#">jnmdz</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="d-lg-flex justify-content-between w-100 align-items-center">
-              
-          <!-- Center links -->
-          <ul class="navbar-nav mx-lg-auto text-center">
-            <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Projects</a></li>
-          </ul>
-
-          <!-- Right contact -->
-          <ul class="navbar-nav mt-3 mt-lg-0">
-            <li class="nav-item">
-              <a href="index.html#contact" class="nav-link" 
-                 style="color: white; text-decoration: none; transition: color 0.3s;"
-                 onmouseover="this.style.color='#468A9A';" 
-                 onmouseout="this.style.color='white';">
-                Contact
-              </a>
-            </li>
-          </ul>
-
-        </div>
+        <ul class="navbar-nav mx-lg-auto text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link portfolio-link" href="index.html#portfolio">Projects</a></li>
+        </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Blender Projects -->
+  <!-- Blender Projects Gallery -->
   <div class="container py-5">
     <h2 class="mb-4">3D Blender Projects</h2>
     <p class="mb-4">Here are some of my Blender renders and artworks.</p>
+<div class="row g-4 gallery">
+  <div class="col-md-4"><img src="assets/REN1.png" alt="Blender Render 1"></div>
+  <div class="col-md-4"><img src="assets/REN2.png" alt="Blender Render 2"></div>
+  <div class="col-md-4"><img src="assets/REN3.png" alt="Blender Render 3"></div>
 
-    <div class="row g-4 gallery">
-      <div class="col-md-4"><img src="assets/REN1.png" alt="Blender Render 1"></div>
-      <div class="col-md-4"><img src="assets/REN2.png" alt="Blender Render 2"></div>
-      <div class="col-md-4"><img src="assets/REN3.png" alt="Blender Render 3"></div>
-
-      <!-- Video thumbnail with play icon -->
-      <div class="col-md-4">
-        <div class="video-wrapper">
-          <img src="assets/REN1.png" alt="Blender Video" class="video-thumb"
-               data-video="assets/DONATHAN.mp4">
-          <span class="play-icon">▶</span>
-        </div>
-      </div>
+  <!-- Video 1 -->
+  <div class="col-md-4">
+    <div class="video-wrapper">
+      <img src="assets/REN1.png" alt="Blender Video 1" class="video-thumb"
+           data-drive="16XaJte5ZB2eJK12WX1GEsqOlet4Fj6gj">
+      <span class="play-icon"></span>
     </div>
+  </div>
 
-    <!-- Next project navigation -->
+  <!-- Video 2 -->
+  <div class="col-md-4">
+    <div class="video-wrapper">
+      <img src="assets/REN2.png" alt="Blender Video 2" class="video-thumb"
+           data-drive="1H1RI956a3X0VKY030ThrJTH5i8_T9esz">
+      <span class="play-icon"></span>
+    </div>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="col-md-4">
+    <div class="video-wrapper">
+      <img src="assets/REN3.png" alt="Blender Video 3" class="video-thumb"
+           data-drive="1Mwp8VBsebm1iTyaInCyIwfx_HNUe1Pkn">
+      <span class="play-icon"></span>
+    </div>
+  </div>
+</div>
+
+
     <div class="project-nav">
       <a href="portfolio-sports.html">← Previous Project</a>
     </div>
@@ -200,9 +212,7 @@
     <span class="modal-close" id="modalClose">✕</span>
     <span class="modal-prev" id="modalPrev">‹</span>
     <img id="modalImage" src="" alt="Preview">
-    <video id="modalVideo" controls style="display:none;">
-      <source src="" type="video/mp4">
-    </video>
+    <iframe id="modalIframe" style="display:none;" allow="autoplay"></iframe>
     <span class="modal-next" id="modalNext">›</span>
   </div>
 
@@ -212,30 +222,25 @@
   <script>
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImage");
-    const modalVideo = document.getElementById("modalVideo");
+    const modalIframe = document.getElementById("modalIframe");
     const closeBtn = document.getElementById("modalClose");
     const nextBtn = document.getElementById("modalNext");
     const prevBtn = document.getElementById("modalPrev");
-    const items = document.querySelectorAll(".gallery img");
+    const items = document.querySelectorAll(".gallery img, .gallery .video-thumb");
 
     let currentIndex = 0;
 
     function openModal(index) {
       currentIndex = index;
       const item = items[index];
-      const videoSrc = item.dataset.video;
+      const driveId = item.dataset.drive;
 
-      if (videoSrc) {
-        // Show video
+      if (driveId) {
         modalImg.style.display = "none";
-        modalVideo.style.display = "block";
-        modalVideo.querySelector("source").src = videoSrc;
-        modalVideo.load();
-        modalVideo.play(); // autoplay (optional)
+        modalIframe.style.display = "block";
+        modalIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
       } else {
-        // Show image
-        modalVideo.pause();
-        modalVideo.style.display = "none";
+        modalIframe.style.display = "none";
         modalImg.style.display = "block";
         modalImg.src = item.src;
       }
@@ -245,8 +250,7 @@
 
     function closeModal() {
       modal.style.display = "none";
-      modalVideo.pause(); // stop video pag close
-      modalVideo.currentTime = 0; // reset to start
+      modalIframe.src = ""; // reset
     }
 
     function showNext() {
@@ -267,18 +271,11 @@
     nextBtn.addEventListener("click", showNext);
     prevBtn.addEventListener("click", showPrev);
 
-    // ESC + arrow keys
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeModal();
       if (e.key === "ArrowRight") showNext();
       if (e.key === "ArrowLeft") showPrev();
     });
-
-    // Navbar active state
-    const currentPage = window.location.pathname;
-    if (currentPage.includes("portfolio") && !currentPage.includes("index.html")) {
-      document.querySelector(".navbar-nav .portfolio-link")?.classList.add("active");
-    }
   </script>
 </body>
 </html>
