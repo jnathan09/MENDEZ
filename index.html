@@ -21,6 +21,8 @@
   font-weight: 600;
   border-bottom:  px solid #468A9A; /* optional underline effect */
 }
+
+
 </style>
 
 </head>
@@ -354,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
             +639682658498
           </li>
          <li class="mb-3 d-flex align-items-center">
-                  <li class="mb-3 d-flex align-items-center">
+                  
           <i class="bi bi-envelope-fill me-3 fs-5"></i>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jnathanmendez09@gmail.com" target="_blank" class="text-white text-decoration-none">
             jnathanmendez09@gmail.com
@@ -364,12 +366,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         </ul>
 
-        <!-- Social icons -->
-        <div class="mt-4 text-start">
-          <a href="https://www.facebook.com/mendezjonathan09 " target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
-          <a href=" " target="_blank" class="text-white me-3"><i class="bi bi-linkedin fs-5"></i></a>
-          <a href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
-        </div>
+       <!-- Social icons -->
+<div class="mt-4 text-start social-icons">
+  <a href="https://www.facebook.com/mendezjonathan09" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+  <a href="#" target="_blank" class="text-white me-3"><i class="bi bi-linkedin fs-5"></i></a>
+  <a href="https://www.instagram.com/jmndz.io?igsh=Z2dneGNwOG8wdWo2" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
+</div>
+
       </div>
 
      <!-- Right side (Form) -->
@@ -433,6 +436,54 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <!-- Custom CSS -->
 <style>
+  /* Contact list icons hover */
+ul li i {
+  color: #fff; /* default icon color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover i {
+  color: #468A9A;      /* cyan on hover */
+  transform: scale(1.2); /* subtle pop effect */
+}
+
+/* Email link hover */
+ul li a {
+  color: #fff; /* default link color */
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #468A9A; /* cyan on hover */
+  text-decoration: underline;
+}
+
+  /* Social icons hover */
+.social-icons a i {
+  color: #fff; /* default icon color */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover i {
+  color: #468A9A;      /* cyan on hover */
+  transform: scale(1.2); /* subtle pop effect */
+}
+
+  /* Custom button hover */
+#contact-form .btn {
+  background-color: #fff; /* default color */
+  color: #468A9A;         /* text color */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#contact-form .btn:hover {
+  background-color: #468A9A; /* cyan hover */
+  color: #fff;               /* text becomes white */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(70,138,154,0.4);
+}
+
   .custom-input {
     background-color: #000;        /* Black background */
     color: #fff;                   /* White text */
