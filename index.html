@@ -511,37 +511,6 @@ ul li a:hover {
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
-
-    document.addEventListener("DOMContentLoaded", function () {
-  const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-    target: ".navbar",
-    offset: 120, // increase offset (70 too small for your navbar height)
-  });
-
-  // Refresh ScrollSpy when resizing
-  window.addEventListener("resize", () => scrollSpy.refresh());
-});
-
-window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section[id]");
-  const scrollY = window.scrollY + 200; // adjust offset
-  
-  sections.forEach(sec => {
-    const sectionTop = sec.offsetTop;
-    const sectionHeight = sec.offsetHeight;
-    const id = sec.getAttribute("id");
-
-    const link = document.querySelector(`.navbar-nav a[href="#${id}"]`);
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      link?.classList.add("active");
-    } else {
-      link?.classList.remove("active");
-    }
-  });
-});
-
-
   </script>
 </body>
 </html>
