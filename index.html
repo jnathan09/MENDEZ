@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <hr class="divider-line">
 
 
-<!-- Portfolio Section -->
+<!-- Project Section -->
 <section id="portfolio" class="portfolio-section py-5 text-white" style="background-color: #0a0908;  ">
   <div class="container">
     <h2 class="section-title">Creative Projects</h2>
@@ -511,6 +511,37 @@ ul li a:hover {
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: ".navbar",
+    offset: 120, // increase offset (70 too small for your navbar height)
+  });
+
+  // Refresh ScrollSpy when resizing
+  window.addEventListener("resize", () => scrollSpy.refresh());
+});
+
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const scrollY = window.scrollY + 200; // adjust offset
+  
+  sections.forEach(sec => {
+    const sectionTop = sec.offsetTop;
+    const sectionHeight = sec.offsetHeight;
+    const id = sec.getAttribute("id");
+
+    const link = document.querySelector(`.navbar-nav a[href="#${id}"]`);
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      link?.classList.add("active");
+    } else {
+      link?.classList.remove("active");
+    }
+  });
+});
+
+
   </script>
 </body>
 </html>
