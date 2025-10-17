@@ -36,6 +36,58 @@ section[id] {
   scroll-margin-top: 90px; /* adjust to your navbar height */
 }
 
+/* Modal base style */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content inside modal */
+.video-modal-content {
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Play icon overlay */
+.play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.play-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 12px 0 12px 18px;
+  border-color: transparent transparent transparent white;
+}
+
+
 
 </style>
 
@@ -345,6 +397,190 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
     </div>
+
+
+
+<!-- REEL
+  🎬 Watch All My Works Section 
+<section class="reel-section text-center mt-5 pb-5" data-aos="fade-up">
+  <h5 class="fw-bold text-white mb-3">
+    🎥 Watch All My Works in One Reel
+  </h5>
+
+  <div class="reel-wrapper mx-auto">
+    <div class="video-wrapper">
+      <img src="assets/REN2.png"
+           alt="All Works Reel"
+           class="video-thumb"
+           data-drive="1H1RI956a3X0VKY030ThrJTH5i8_T9esz">
+      <span class="play-icon"></span>
+    </div>
+  </div>
+</section>
+
+ -->
+
+<!--  Styles -->
+<style>/*
+.reel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reel-wrapper {
+  position: relative;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reel-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.video-thumb {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+/* Overlay background */
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Centered video container */
+.video-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px; /* 🔹 mas malaki na */
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  z-index: 99999; /* 🔹 pinakamataas na layer */
+  background: rgba(0, 0, 0, 0.4); /* 🔹 para hindi mawala sa light backgrounds */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 42px;
+  transition: transform 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff5555;
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+
+/* Full video frame */
+.video-modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .video-modal-content {
+    width: 95%;
+    max-width: 600px;
+  }
+  .close-btn {
+    font-size: 28px;
+  }
+}
+
+*/
+</style>
+
+
+<!-- 🔹 Video Modal
+  
+<div id="videoModal" class="video-modal">
+   Close button outside - 
+  <span class="close-btn" id="closeModal">&times;</span>
+
+    Correct container name - 
+  <div class="video-modal-content">
+    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+ -->
+
+<script>
+//  document.addEventListener("DOMContentLoaded", () => {
+//    const videoThumb = document.querySelector(".video-thumb");
+//    const videoModal = document.getElementById("videoModal");
+//    const closeModal = document.getElementById("closeModal");
+//    const videoFrame = document.getElementById("videoFrame");
+
+//    videoThumb.addEventListener("click", () => {
+//      const embedUrl = `https://drive.google.com/file/d/${driveId}/preview`;
+//      videoModal.style.display = "flex";
+ //     document.body.style.overflow = "hidden"; // disable scroll
+//    });
+
+//    closeModal.addEventListener("click", () => {
+//      videoModal.style.display = "none";
+//      videoFrame.src = "";
+//      document.body.style.overflow = "auto"; // restore scroll
+ //   });
+
+//    window.addEventListener("click", (e) => {
+//      if (e.target === videoModal) {
+//        videoModal.style.display = "none";
+//        videoFrame.src = "";
+//        document.body.style.overflow = "auto";
+ //     }
+//    });
+//  });
+</script>
+ 
+  
   </div>
 </section>
 
@@ -526,7 +762,7 @@ ul li a:hover {
   <script>
     AOS.init();
 
-
+   
 
   </script>
 </body>
