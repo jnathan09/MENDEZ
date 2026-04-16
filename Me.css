@@ -5,6 +5,7 @@ body {
   text-align: center;
 }
 
+
 .divider-line {
   height: 1.5px;
   background: linear-gradient(to right, #468A9A, #fff, #468A9A);
@@ -122,7 +123,7 @@ body {
 }
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
   }
 
@@ -294,7 +295,7 @@ body {
   }
 
   .about-text {
-    font-size: 0.8rem;
+    font-size: 0.8  rem;
     line-height: 1.6;
     text-align: justify;
     text-indent: 0 !important;
