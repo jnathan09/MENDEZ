@@ -9,7 +9,6 @@ body {
   height: 1.5px;
   background: linear-gradient(to right, #468A9A, #fff, #468A9A);
   border: none;
-  
 }
 
 
@@ -18,8 +17,9 @@ body {
 }
 
 .navbar-brand {
-  font-weight: ;
+  font-weight: 700;
   color: #fff !important;
+  font-size: 1.5rem;
 }
 
 .navbar-nav .nav-link {
@@ -27,6 +27,22 @@ body {
   margin: 0 10px;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 0.5rem 0 !important;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+    padding: 0.5rem 0 !important;
+  }
 }
 
 .navbar-nav .nav-link:hover {
@@ -39,33 +55,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #bbb;
-}
-
-.btn-custom {
-  background: #fff;
-  color: #000;
-  border-radius: 30px;
-  padding: 12px 40px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn-custom:hover {
-  background: #00d0ff;
-  color: #fff;
-  transform: scale(1.05);
 }
 
 .hero-section {
@@ -119,8 +108,47 @@ body {
 }
 
 .btn-custom {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
   padding: 0.75rem 2rem;
   font-size: 1rem;
+}
+
+.btn-custom:hover {
+  background: #00d0ff;
+  color: #fff;
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-custom {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
 }
 
 /* Animations */
@@ -219,6 +247,14 @@ body {
   padding-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .about-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+  }
+}
+
 /* Desktop adjustments */
 @media (min-width: 992px) {
   .about-image {
@@ -251,6 +287,29 @@ body {
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+    text-indent: 0 !important;
+  }
+
+  .about-section {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+  }
+}
+
 .tools {
   margin-top: 20px;
 }
@@ -264,6 +323,18 @@ body {
 
 .tool-icon:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .tool-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+  }
+
+  .tools {
+    margin-top: 15px;
+  }
 }
 
 .btn-about {
@@ -299,6 +370,18 @@ body {
   font-size: 1rem;
   color: #bbb;
   margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
 }
 
 /* Portfolio */
@@ -366,6 +449,18 @@ body {
   transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .portfolio-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item img {
+    height: 180px;
+  }
+}
+
 .portfolio-item .img-primary {
   opacity: 1;
   transform: scale(1);
@@ -417,3 +512,152 @@ body {
       margin-bottom: 20px;
       cursor: pointer;
     }
+
+/* Additional Mobile Responsive Styles */
+
+/* Contact Section Mobile Styles */
+@media (max-width: 768px) {
+  .contact-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-section h5 {
+    font-size: 1.3rem;
+  }
+
+  .contact-section form input,
+  .contact-section form textarea {
+    font-size: 16px;
+    padding: 0.75rem;
+  }
+
+  .contact-section ul li {
+    font-size: 0.95rem;
+  }
+
+  .contact-section .social-icons {
+    margin-top: 2rem;
+  }
+}
+
+/* Service Box Mobile Styles */
+@media (max-width: 768px) {
+  .service-box {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .service-box h5 {
+    font-size: 1.1rem;
+  }
+
+  .service-box p {
+    font-size: 0.95rem;
+  }
+
+  .service-box i {
+    font-size: 2.5rem !important;
+  }
+}
+
+/* Portfolio Section Mobile Styles */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 2rem 0;
+  }
+
+  .portfolio-section .container {
+    padding: 0 1rem;
+  }
+}
+
+/* General Container Padding for Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section {
+    padding: 2rem 0 !important;
+  }
+
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+/* About Section Mobile Padding Fix */
+@media (max-width: 768px) {
+  .about-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-section {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+  }
+}
+
+/* Button Mobile Styles */
+@media (max-width: 768px) {
+  .btn-custom {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .btn-about {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  button.btn {
+    min-height: 44px;
+  }
+}
+
+/* Text Alignment Fix */
+@media (max-width: 768px) {
+  .text-center {
+    text-align: center;
+  }
+
+  .text-start {
+    text-align: left;
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Navbar Items Spacing */
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    padding-top: 1rem;
+  }
+
+  .divider-line {
+    margin: 1rem 0;
+  }
+}
+
+/* Portfolio Item Animation Disable on Mobile */
+@media (max-width: 768px) {
+  .portfolio-item:hover .img-primary {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .portfolio-item:hover .img-hover {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
