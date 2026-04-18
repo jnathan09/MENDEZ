@@ -464,6 +464,15 @@ body {
     height: 120px;
     width: 100%;
   }
+
+  .gallery img {
+       
+      height: 190px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform .3s;
+    }
 }
 
 @media (max-width: 480px) {
