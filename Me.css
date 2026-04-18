@@ -388,10 +388,17 @@ body {
 }
 
 /* Portfolio */
+.portfolio-section {
+  overflow-x: hidden;
+  width: 100%; 
+  max-height: fit-content; 
+}
+
 .portfolio-item {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  
 }
 
 .portfolio-item img {
