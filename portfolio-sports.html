@@ -19,6 +19,19 @@
       object-fit:cover; border-radius:8px;
       transition:.3s; cursor:pointer;
     }
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+        height: 180px;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img {
+        height: 140px;
+      }
+    }
     .gallery img:hover { transform:scale(1.05); }
 
     .navbar-nav .nav-link.active {
@@ -132,16 +145,16 @@
     <img src="assets/STEPCURRY.png" alt="Featured Ad">
   </div>
 
- <div class="row g-4 gallery">
-  <div class="  col-md-4"><img src="assets/SPO1.jpg" alt="Sports Design 1" class="img-fluid shadow"></div>
-  <div class="  col-md-4"><img src="assets/sports01.jpg" alt="Sports Design 1" class="img-fluid shadow"></div>
-  <div class="  col-md-4"><img src="assets/sports6.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
-  <!--<div class="  col-md-4"><img src="assets/sports3.PNG" alt="Sports Design 3" class="img-fluid shadow"></div>
-  <div class="  col-md-4"><img src="assets/sports002.jpg" alt="Sports Design 2" class="img-fluid shadow"></div> -->
-  <div class="  col-md-4"><img src="assets/sports4.jpg" alt="Sports Design 4" class="img-fluid shadow"></div>
-  <div class="  col-md-4"><img src="assets/sports5.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
-  <!--<div class="  col-md-4"><img src="assets/sports7.jpg" alt="Sports Design 5" class="img-fluid shadow"></div> -->
-  <div class="  col-md-4"><img src="assets/sports8.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
+ <div class="row row-cols-2 row-cols-md-3 g-4 gallery">
+  <div class="col"><img src="assets/SPO1.jpg" alt="Sports Design 1" class="img-fluid shadow"></div>
+  <div class="col"><img src="assets/sports01.jpg" alt="Sports Design 1" class="img-fluid shadow"></div>
+  <div class="col"><img src="assets/sports6.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
+  <!--<div class="col"><img src="assets/sports3.PNG" alt="Sports Design 3" class="img-fluid shadow"></div>
+  <div class="col"><img src="assets/sports002.jpg" alt="Sports Design 2" class="img-fluid shadow"></div> -->
+  <div class="col"><img src="assets/sports4.jpg" alt="Sports Design 4" class="img-fluid shadow"></div>
+  <div class="col"><img src="assets/sports5.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
+  <!--<div class="col"><img src="assets/sports7.jpg" alt="Sports Design 5" class="img-fluid shadow"></div> -->
+  <div class="col"><img src="assets/sports8.jpg" alt="Sports Design 5" class="img-fluid shadow"></div>
 
 </div>
 
