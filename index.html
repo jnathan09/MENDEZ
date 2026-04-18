@@ -262,10 +262,10 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Services Section -->
 <section id="services" class="services-section py-5 text-white" style="background-color: #0a0908;">
   <div class="container text-center">
-    <h2 class="section-title mb-3" data-aos="fade-up">Services</h2>
-    <p class="section-subtitle mb-5" data-aos="fade-up" data-aos-delay="100">What I can do for you</p>
+    <h2 class="section-title  fw-bold text-start mb-1" data-aos="fade-up">Services</h2>
+    <p class="section-subtitle  text-start" data-aos="fade-up" data-aos-delay="100">What I can do for you</p>
     
-    <div class="row g-3 g-md-4">
+    <div class="row g-3 d-none d-md-flex">
       
       <!-- Service 1 -->
       <div class="col-12 col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
@@ -297,6 +297,49 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
       
+    </div>
+
+    <!-- Mobile Slider -->
+    <div id="servicesCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="service-box p-4 rounded-4 mx-auto" style="max-width: 300px;">
+            <i class="bi bi-palette fs-1 mb-3 icon-1"></i>
+            <h5 class="fw-bold">Graphic Design</h5>
+            <p>Logos, posters, branding, and creative assets tailored for your business.</p>
+            <p class="small text-secondary mt-3"><strong>Tools:</strong> Adobe Photoshop, Illustrator</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="service-box p-4 rounded-4 mx-auto" style="max-width: 300px;">
+            <i class="bi bi-camera-reels fs-1 mb-3 icon-2"></i>
+            <h5 class="fw-bold">Multimedia</h5>
+            <p>Visual storytelling through engaging videos and digital art projects.</p>
+            <p class="small text-secondary mt-3"><strong>Tools:</strong>Premiere Pro</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="service-box p-4 rounded-4 mx-auto" style="max-width: 300px;">
+            <i class="bi bi-cpu fs-1 mb-3 icon-3"></i>
+            <h5 class="fw-bold">3D Design</h5>
+            <p>High-quality 3D models and renderings using Blender for creative projects.</p>
+            <p class="small text-secondary mt-3"><strong>Tools:</strong> Blender, Photoshop</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </section>
@@ -365,15 +408,15 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio-section py-5 text-white" style="background-color: #0a0908;  ">
   <div class="container">
-    <h2 class="section-title">Creative Projects</h2>
-    <p class="section-subtitle">
+    <h2 class="section-title fw-bold text-start mb-1">Creative Projects</h2>
+    <p class="section-subtitle text-start">
       Welcome to my portfolio. Here you’ll find a selection of my work. 
       Explore my projects to learn more about what I do.
     </p>
 
     <div class="row g-4 mt-4  pb-5">
       <!-- Portfolio Item -->
-     <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+     <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="portfolio-item">
           <a href="portfolio-futuristic.html">
             <img class="img-primary" src="assets/PHOTOCOVER.png" alt="Artwork">
@@ -383,7 +426,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-item">
           <a href="portfolio-movie.html">
             <img class="img-primary" src="assets/MOVIECOVER.png" alt="Movie Posters">
@@ -393,7 +436,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div class="portfolio-item">
           <a href="portfolio-logos.html">
             <img class="img-primary" src="assets/LOGOCOVER.png" alt="Logos">
@@ -403,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up">
+      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
         <div class="portfolio-item">
           <a href="portfolio-ads.html">
             <img class="img-primary" src="assets/ADSCOVER.png" alt="Advertisement">
@@ -413,7 +456,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
         <div class="portfolio-item">
           <a href="portfolio-sports.html">
             <img class="img-primary" src="assets/SPORTSCOVER.png" alt="Sports Promotion">
@@ -425,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
 
-       <div class="col-12 col-sm-6 col-md-4" data-aos="fade-up">
+       <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
         <div class="portfolio-item">
           <a href="portfolio-blender.html">
             <img class="img-primary" src="assets/3DCOVER.png" alt="3D Blender">
