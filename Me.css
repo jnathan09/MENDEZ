@@ -467,7 +467,7 @@ body {
 
   .gallery img {
        
-      height: 190px;
+      max-height: 190px;
       object-fit: cover;
       border-radius: 8px;
       cursor: pointer;
