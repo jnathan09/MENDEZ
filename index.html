@@ -36,6 +36,10 @@ section[id] {
   scroll-margin-top: 90px; /* adjust to your navbar height */
 }
 
+.portfolio-section {
+  overflow: hidden;
+}
+
 /* Modal base style */
 .video-modal {
   display: none;
@@ -321,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         <div class="carousel-item">
-          <div class="service-box p-4 rounded-4 mx-auto" style="max-width: 3950px;">
+          <div class="service-box p-4 rounded-4 mx-auto" style="max-width: 395px;">
             <i class="bi bi-cpu fs-1 mb-3 icon-3"></i>
             <h5 class="fw-bold">3D Design</h5>
             <p>High-quality 3D models and renderings using Blender for creative projects.</p>
@@ -411,72 +415,86 @@ document.addEventListener("DOMContentLoaded", () => {
       Explore my projects to learn more about what I do.
     </p>
 
-    <div class="row g-4 mt-4  pb-5">
-      <!-- Portfolio Item -->
-     <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-item">
-          <a href="portfolio-futuristic.html">
-            <img class="img-primary" src="assets/PHOTOCOVER.png" alt="Artwork">
-            <img class="img-hover" src="assets/MANIPULATION.png" alt="Artwork Hover">
-            <!--<div class="overlay">Photo Manipulation Projects</div>-->
-          </a>
-        </div>
-      </div>
+    <div class="portfolio-tabs">
+      <button class="tab-btn active" data-page="all" onclick="loadPortfolio('all', this); return false;">All</button>
+      <button class="tab-btn" data-page="portfolio-ads.html" onclick="loadPortfolio('portfolio-ads.html', this); return false;">Advertisement</button>
+      <button class="tab-btn" data-page="portfolio-sports.html" onclick="loadPortfolio('portfolio-sports.html', this); return false;">Sports</button>
+      <button class="tab-btn" data-page="portfolio-logos.html" onclick="loadPortfolio('portfolio-logos.html', this); return false;">Logos</button>
+      <button class="tab-btn" data-page="portfolio-movie.html" onclick="loadPortfolio('portfolio-movie.html', this); return false;">Movie Posters</button>
+      <button class="tab-btn" data-page="portfolio-futuristic.html" onclick="loadPortfolio('portfolio-futuristic.html', this); return false;">Photo Manipulation</button>
+      <button class="tab-btn" data-page="portfolio-blender.html" onclick="loadPortfolio('portfolio-blender.html', this); return false;">3D</button>
+    </div>
 
-      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-item">
-          <a href="portfolio-movie.html">
-            <img class="img-primary" src="assets/MOVIECOVER.png" alt="Movie Posters">
-            <img class="img-hover" src="assets/MOVIE POSTER.png" alt="Movie Posters Hover">
-            <!--<div class="overlay">Movie Posters</div>-->
-          </a>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="portfolio-item">
-          <a href="portfolio-logos.html">
-            <img class="img-primary" src="assets/LOGOCOVER.png" alt="Logos">
-            <img class="img-hover" src="assets/DZ COVER.png" alt="Logos Hover">
-            <!--<div class="overlay">Artistic Logos and Designs</div>-->
-          </a>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
-        <div class="portfolio-item">
-          <a href="portfolio-ads.html">
-            <img class="img-primary" src="assets/ADSCOVER.png" alt="Advertisement">
-            <img class="img-hover" src="assets/ADSMAIN.png" alt="Advertisement Hover">
-           <!-- <div class="overlay">Creative Advertisement Design</div>-->
-          </a>
-        </div>
-      </div>
-
-      <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="portfolio-item">
-          <a href="portfolio-sports.html">
-            <img class="img-primary" src="assets/SPORTSCOVER.png" alt="Sports Promotion">
-            <img class="img-hover" src="assets/STEPCURRY.png" alt="Sports Promotion Hover">
-            <!-- <div class="overlay">Sports and Fitness Promotion</div>-->
-          </a>
-        </div>
-      </div>
-
-      
-
+    <div id="portfolio-content" class="portfolio-content">
+      <div class="row g-4 mt-4 pb-5">
+        <!-- Portfolio Item -->
        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
-        <div class="portfolio-item">
-          <a href="portfolio-blender.html">
-            <img class="img-primary" src="assets/3DCOVER.png" alt="3D Blender">
-            <img class="img-hover" src="assets/REN1.png" alt="3D Blender Hover">
-            <!-- <div class="overlay">3D Blender</div>-->
-          </a>
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-ads.html'); return false;">
+              <img class="img-primary" src="assets/ADSCOVER.png" alt="Advertisement">
+              <img class="img-hover" src="assets/ADSMAIN.png" alt="Advertisement Hover">
+             <!-- <div class="overlay">Creative Advertisement Design</div>-->
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-sports.html'); return false;">
+              <img class="img-primary" src="assets/SPORTSCOVER.png" alt="Sports Promotion">
+              <img class="img-hover" src="assets/STEPCURRY.png" alt="Sports Promotion Hover">
+              <!-- <div class="overlay">Sports and Fitness Promotion</div>-->
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-movie.html'); return false;">
+              <img class="img-primary" src="assets/MOVIECOVER.png" alt="Movie Posters">
+              <img class="img-hover" src="assets/MOVIE POSTER.png" alt="Movie Posters Hover">
+              <!--<div class="overlay">Movie Posters</div>-->
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-logos.html'); return false;">
+              <img class="img-primary" src="assets/LOGOCOVER.png" alt="Logos">
+              <img class="img-hover" src="assets/DZ COVER.png" alt="Logos Hover">
+              <!--<div class="overlay">Artistic Logos and Designs</div>-->
+            </a>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-futuristic.html'); return false;">
+              <img class="img-primary" src="assets/PHOTOCOVER.png" alt="Artwork">
+              <img class="img-hover" src="assets/MANIPULATION.png" alt="Artwork Hover">
+              <!--<div class="overlay">Photo Manipulation Projects</div>-->
+            </a>
+          </div>
+        </div>
+
+        
+
+
+
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-blender.html'); return false;">
+              <img class="img-primary" src="assets/3DCOVER.png" alt="3D Blender">
+              <img class="img-hover" src="assets/REN1.png" alt="3D Blender Hover">
+              <!-- <div class="overlay">3D Blender</div>-->
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
-
+  </div>
+</section>
 
 <!-- REEL
   🎬 Watch All My Works Section 
@@ -600,6 +618,128 @@ document.addEventListener("DOMContentLoaded", () => {
   border-radius: 15px;
 }
 
+#portfolio-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+#portfolio-content.fade-out {
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+}
+
+#portfolio-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-top: 28px;
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+  overflow-x: auto;
+}
+
+.portfolio-tabs::-webkit-scrollbar {
+  height: 5px;
+}
+
+.portfolio-tabs::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.18);
+  border-radius: 999px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #b0b3b8;
+  font-size: 1rem;
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.25s ease, transform 0.25s ease;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+}
+
+.tab-btn.active {
+  color: #ffffff;
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background: #00d0ff;
+  border-radius: 10px;
+}
+
+.img-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 2rem;
+}
+
+.img-modal img,
+.img-modal iframe {
+  max-width: 95%;
+  max-height: 90vh;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.65);
+}
+
+.modal-close,
+.modal-prev,
+.modal-next {
+  position: absolute;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-close {
+  top: 24px;
+  right: 24px;
+}
+
+.modal-prev {
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-next {
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-close:hover,
+.modal-prev:hover,
+.modal-next:hover {
+  color: #00d0ff;
+  transform: scale(1.08);
+}
+
 /* Responsive tweak */
 @media (max-width: 768px) {
   .video-modal-content {
@@ -613,7 +753,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 </style>
- 
+
+<div class="img-modal" id="portfolioModal">
+  <span class="modal-close" id="modalClose">✕</span>
+  <span class="modal-prev" id="modalPrev">‹</span>
+  <img id="modalImage" src="" alt="Preview" style="display:none;">
+  <iframe id="modalIframe" style="display:none;" allow="autoplay"></iframe>
+  <span class="modal-next" id="modalNext">›</span>
+</div>
 
 <!-- 🔹 Video Modal
   
@@ -657,14 +804,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //    });
 //  });
 </script>
- 
-  
-  </div>
- 
-
-
-
-
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section bg-black text-white py-5 ">
@@ -840,8 +979,206 @@ ul li a:hover {
   <script>
     AOS.init();
 
-   
+    let portfolioModalState = {
+      currentIndex: 0,
+      items: [],
+      initialized: false,
+    };
 
+    let defaultPortfolioHTML = "";
+
+    function updatePortfolioPageStyles(doc) {
+      let styleHolder = document.getElementById("portfolio-page-styles");
+      if (!styleHolder) {
+        styleHolder = document.createElement("style");
+        styleHolder.id = "portfolio-page-styles";
+        document.head.appendChild(styleHolder);
+      }
+
+      const pageStyles = Array.from(doc.querySelectorAll("head style, body style"))
+        .map((style) => style.textContent.trim())
+        .filter(Boolean)
+        .join("\n\n");
+
+      styleHolder.textContent = pageStyles;
+    }
+
+    function setActivePortfolioTab(button) {
+      const tabButtons = document.querySelectorAll(".portfolio-tabs .tab-btn");
+      tabButtons.forEach((tab) => tab.classList.remove("active"));
+      if (button) button.classList.add("active");
+    }
+
+    function getTabButtonForPage(page) {
+      return document.querySelector(`.portfolio-tabs .tab-btn[data-page="${page}"]`)
+        || document.querySelector(".portfolio-tabs .tab-btn.active");
+    }
+
+    function initPortfolioContent() {
+      const content = document.getElementById("portfolio-content");
+      if (!content) return;
+
+      if (!defaultPortfolioHTML) {
+        defaultPortfolioHTML = content.innerHTML;
+      }
+
+      const modal = document.getElementById("portfolioModal");
+      const modalImg = document.getElementById("modalImage");
+      const modalIframe = document.getElementById("modalIframe");
+      const closeBtn = document.getElementById("modalClose");
+      const nextBtn = document.getElementById("modalNext");
+      const prevBtn = document.getElementById("modalPrev");
+
+      portfolioModalState.items = Array.from(content.querySelectorAll(".gallery img, .gallery .video-thumb, .featured img"));
+
+      function openModal(index) {
+        const item = portfolioModalState.items[index];
+        if (!item || !modal) return;
+
+        portfolioModalState.currentIndex = index;
+        const driveId = item.dataset.drive;
+
+        if (driveId) {
+          modalImg.style.display = "none";
+          modalIframe.style.display = "block";
+          modalIframe.src = `https://drive.google.com/file/d/${driveId}/preview`;
+        } else {
+          modalIframe.style.display = "none";
+          modalImg.style.display = "block";
+          modalImg.src = item.src;
+        }
+
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal() {
+        if (!modal) return;
+        modal.style.display = "none";
+        modalIframe.src = "";
+        document.body.style.overflow = "auto";
+      }
+
+      function showNext() {
+        portfolioModalState.currentIndex = (portfolioModalState.currentIndex + 1) % portfolioModalState.items.length;
+        openModal(portfolioModalState.currentIndex);
+      }
+
+      function showPrev() {
+        portfolioModalState.currentIndex = (portfolioModalState.currentIndex - 1 + portfolioModalState.items.length) % portfolioModalState.items.length;
+        openModal(portfolioModalState.currentIndex);
+      }
+
+      portfolioModalState.items.forEach((item) => {
+        item.addEventListener("click", (event) => {
+          const clickedItem = event.currentTarget;
+          const index = portfolioModalState.items.indexOf(clickedItem);
+          if (index !== -1) openModal(index);
+        });
+      });
+
+      if (closeBtn && !closeBtn.dataset.initialized) {
+        closeBtn.addEventListener("click", closeModal);
+        closeBtn.dataset.initialized = "true";
+      }
+      if (nextBtn && !nextBtn.dataset.initialized) {
+        nextBtn.addEventListener("click", showNext);
+        nextBtn.dataset.initialized = "true";
+      }
+      if (prevBtn && !prevBtn.dataset.initialized) {
+        prevBtn.addEventListener("click", showPrev);
+        prevBtn.dataset.initialized = "true";
+      }
+      if (!portfolioModalState.initialized) {
+        document.addEventListener("keydown", (event) => {
+          if (!modal || modal.style.display !== "flex") return;
+          if (event.key === "Escape") closeModal();
+          if (event.key === "ArrowRight") showNext();
+          if (event.key === "ArrowLeft") showPrev();
+        });
+        portfolioModalState.initialized = true;
+      }
+
+      content.querySelectorAll(".project-nav a").forEach((link) => {
+        const targetPage = link.getAttribute("href");
+        if (targetPage && targetPage.includes("portfolio-") && !link.dataset.dynamic) {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            loadPortfolio(targetPage);
+          });
+          link.dataset.dynamic = "true";
+        }
+      });
+
+      const seeMoreBtn = content.querySelector("#seeMoreBtn");
+      if (seeMoreBtn && !seeMoreBtn.dataset.initialized) {
+        seeMoreBtn.addEventListener("click", () => {
+          content.querySelectorAll(".gallery .col[style*='display: none']").forEach((col) => {
+            col.style.display = "";
+          });
+          seeMoreBtn.style.display = "none";
+        });
+        seeMoreBtn.dataset.initialized = "true";
+      }
+    }
+
+    async function loadPortfolio(page, button) {
+      const content = document.getElementById("portfolio-content");
+      const portfolioSection = document.getElementById("portfolio");
+      if (!content || !portfolioSection) return;
+
+      setActivePortfolioTab(button || getTabButtonForPage(page));
+
+      if (page === "all") {
+        content.classList.add("fade-out");
+        await new Promise((resolve) => setTimeout(resolve, 220));
+        content.innerHTML = defaultPortfolioHTML;
+        content.classList.remove("fade-out");
+        content.classList.add("fade-in");
+        initPortfolioContent();
+        AOS.refresh();
+
+        const top = portfolioSection.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({ top, behavior: "smooth" });
+        window.setTimeout(() => content.classList.remove("fade-in"), 550);
+        return;
+      }
+
+      content.classList.add("fade-out");
+      try {
+        const response = await fetch(page);
+        if (!response.ok) throw new Error(`Failed to load ${page}`);
+
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+        const newContent = doc.querySelector("#portfolio-content");
+        if (!newContent) throw new Error(`Page ${page} doesn't contain #portfolio-content`);
+
+        // Remove inline page-specific modal and script blocks from loaded content
+        newContent.querySelectorAll(".img-modal, script").forEach((node) => node.remove());
+
+        updatePortfolioPageStyles(doc);
+        await new Promise((resolve) => setTimeout(resolve, 220));
+        content.innerHTML = newContent.innerHTML;
+        content.classList.remove("fade-out");
+        content.classList.add("fade-in");
+        initPortfolioContent();
+        AOS.refresh();
+
+        const top = portfolioSection.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({ top, behavior: "smooth" });
+
+        window.setTimeout(() => content.classList.remove("fade-in"), 550);
+      } catch (error) {
+        console.error(error);
+        content.classList.remove("fade-out");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initPortfolioContent();
+    });
   </script>
 </body>
 </html>

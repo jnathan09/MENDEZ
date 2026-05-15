@@ -157,7 +157,8 @@
 
 
 <!-- Content -->
-<div class="container py-5">
+<div id="portfolio-content">
+  <div class="container py-5">
   <h2 class="mb-4">Photo Manipulation Projects</h2>
   <p class="mb-4">Exploring creative edits, surreal compositions, and digitally enhanced visuals.</p>
 
@@ -184,9 +185,11 @@
   </div>
 
   <!-- Next project navigation -->
-    <div class="project-nav">
-     <a href="portfolio-movie.html">Next Project →</a>
+    <div class="project-nav d-flex justify-content-between mt-4">
+      <a href="#" onclick="loadPortfolio('portfolio-movie.html'); return false;" class="btn btn-outline-light">← Previous Project</a>
+     <a href="#" onclick="loadPortfolio('portfolio-blender.html'); return false;">Next Project →</a>
     </div>
+  </div>
 </div>
 
 <!-- Fullscreen Modal -->

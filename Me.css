@@ -122,19 +122,35 @@ body {
   transform: scale(1.05);
 }
 @media (max-width: 768px) {
+  body,
+  p,
+  li,
+  a,
+  span,
+  label,
+  input,
+  textarea,
+  button {
+    font-size: 12px !important;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
   .hero-title {
-    font-size: 5rem;
+    font-size: 25px !important;
     margin-bottom: 1rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 12px !important;
     margin-bottom: 1.5rem;
   }
 
   .btn-custom {
     padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
+    font-size: 12px !important;
   }
 
   .hero-content {
@@ -144,11 +160,11 @@ body {
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.4rem;
+    font-size: 25px !important;
   }
 
   .hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 12px !important;
   }
 }
 
@@ -290,7 +306,7 @@ body {
 
 @media (max-width: 768px) {
   .about-title {
-    font-size: 1.5rem;
+    font-size: 15px !important;
     margin-bottom: 15px;
   }
 
@@ -375,13 +391,13 @@ body {
 
 @media (max-width: 768px) {
   .section-title {
-    font-size: 0.9rem;
+    font-size: 25px !important;
     margin-bottom: 8px;
     text-align: left;
   }
 
   .section-subtitle {
-    font-size: 0.7rem;
+    font-size: 12px !important;
     margin-bottom: 15px;
     text-align: left;
   }
@@ -564,8 +580,8 @@ body {
 }
 
 #servicesCarousel .carousel-indicators [data-bs-target] {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%; /* circle */
   background-color: #aaa;
   border: none;

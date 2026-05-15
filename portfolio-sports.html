@@ -138,7 +138,8 @@
 
 
 <!-- Content -->
-<div class="container py-5">
+<div id="portfolio-content">
+  <div class="container py-5">
   <h2 class="mb-4">Sports Design Projects</h2>
   <p class="mb-4">Sports-inspired posters, graphics, and promotional layouts showcasing energy and action.</p>
 
@@ -168,8 +169,8 @@
 
   <!-- Project navigation -->
   <div class="project-nav">
-    <a href="portfolio-ads.html">← Previous Project</a>
-    <a href="portfolio-blender.html">Next Project →</a>
+    <a href="portfolio-ads.html" onclick="if(typeof loadPortfolio==='function'){loadPortfolio('portfolio-ads.html'); return false;}">← Previous Project</a>
+    <a href="portfolio-logos.html" onclick="if(typeof loadPortfolio==='function'){loadPortfolio('portfolio-logos.html'); return false;}">Next Project →</a>
   </div>
 </div>
 
