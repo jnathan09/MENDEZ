@@ -1102,6 +1102,11 @@ ul li a:hover {
         if (!item || !modal) return;
 
         portfolioModalState.currentIndex = index;
+
+        // Reset previous media
+        modalImg.src = "";
+        modalIframe.src = "";
+
         const driveId = item.dataset.drive;
 
         if (driveId) {
@@ -1120,8 +1125,10 @@ ul li a:hover {
 
       function closeModal() {
         if (!modal) return;
+
         modal.style.display = "none";
         modalIframe.src = "";
+        modalImg.src = "";
         document.body.style.overflow = "auto";
       }
 
@@ -1135,13 +1142,18 @@ ul li a:hover {
         openModal(portfolioModalState.currentIndex);
       }
 
-      portfolioModalState.items.forEach((item) => {
-        item.addEventListener("click", (event) => {
-          const clickedItem = event.currentTarget;
-          const index = portfolioModalState.items.indexOf(clickedItem);
-          if (index !== -1) openModal(index);
-        });
-      });
+      // Use event delegation to avoid adding multiple listeners
+      content.onclick = (event) => {
+        const clickedItem = event.target.closest(".gallery img, .gallery .video-thumb, .featured img");
+
+        if (!clickedItem) return;
+
+        const index = portfolioModalState.items.indexOf(clickedItem);
+
+        if (index !== -1) {
+          openModal(index);
+        }
+      };
 
       if (closeBtn && !closeBtn.dataset.initialized) {
         closeBtn.addEventListener("click", closeModal);
