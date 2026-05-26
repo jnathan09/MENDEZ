@@ -1116,13 +1116,14 @@ ul li a:hover {
         } else {
           modalIframe.style.display = "none";
           modalImg.style.display = "block";
+          modalImg.src = item.src;
 
-          const activeSrc =
-            item.getAttribute("src") ||
-            item.dataset.src ||
-            item.currentSrc;
+          //const activeSrc =
+           // item.getAttribute("src") ||
+           // item.dataset.src ||
+            //item.currentSrc;
 
-          modalImg.src = activeSrc;
+         // modalImg.src = activeSrc;
         }
 
         modal.style.display = "flex";
