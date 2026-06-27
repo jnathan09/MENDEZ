@@ -134,7 +134,18 @@ section[id] {
     box-shadow: 0 0 0 3px rgba(0, 208, 255, 0.22);
   }
 
+ @media (max-width: 768px) {
+  .d-flex.align-items-center {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 15px;
+  }
 
+  .btn-about {
+    width: 100%;
+    text-align: center;
+  }
+}
 
 </style>
 
@@ -254,14 +265,16 @@ document.addEventListener("DOMContentLoaded", () => {
  
         </p>
 
-        <div class="tools mb-3">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="tool-icon">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="tool-icon">
-          <img src="assets/CANVALOGO.png" alt="Canva" class="tool-icon"style="border-radius:16%; object-fit:cover;">
-          <img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="Blender" class="tool-icon">
-        </div>
+        <div class="d-flex align-items-center mb-3">
+          <div class="tools">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="tool-icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="tool-icon">
+              <img src="assets/CANVALOGO.png" alt="Canva" class="tool-icon" style="border-radius:16%; object-fit:cover;">
+              <img src="assets/BLENDERLOGO.png" alt="Blender" class="tool-icon" style="border-radius:16%; object-fit:cover;">
+          </div>
 
-      <a href="assets/Resume-Jonathan-Mendez.pdf" class="btn btn-about" target="_blank">View Resume</a>
+          <a href="assets/Resume-Jonathan-Mendez.pdf" class="btn btn-about ms-auto" target="_blank"> View Resume </a>
+           </div>
 
       <style>
         .btn-about {
