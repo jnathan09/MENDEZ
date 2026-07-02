@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="about-text" style="text-indent: 4em;">
                Hi, I am <b>Jonathan Mendez</b>, a Bachelor of Science in Information Technology (BSIT) graduate specialized in Multimedia with a strong passion for creativity and design. 
       As a graphic designer, I focus on transforming ideas into visually compelling designs that communicate effectively and leave a lasting impression. 
-      I am skilled in using industry standard tools such as <b>Adobe Photoshop</b>, <b>Adobe Illustrator</b>, and <b>Blender</b>, which I utilize to create digital artworks, branding, and multimedia projects. 
+      I am skilled in using industry standard tools such as <b>Adobe Photoshop</b>, <b>Adobe Illustrator</b>, and <b>Canva</b>, which I utilize to create digital artworks, branding, and multimedia projects. 
       Combining technical expertise with artistic vision, I strive to deliver unique and impactful results.  
 
       Throughout my journey, I have learned that every design tells a story. 
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop" class="tool-icon">
               <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator" class="tool-icon">
               <img src="assets/CANVALOGO.png" alt="Canva" class="tool-icon" style="border-radius:16%; object-fit:cover;">
-              <img src="assets/BLENDERLOGO.png" alt="Blender" class="tool-icon" style="border-radius:16%; object-fit:cover;">
+            <!--  <img src="assets/BLENDERLOGO.png" alt="Blender" class="tool-icon" style="border-radius:16%; object-fit:cover;">  -->
           </div>
 
           <a href="assets/Resume-Jonathan-Mendez.pdf" class="btn btn-about ms-auto" target="_blank"> View Resume </a>
@@ -478,7 +478,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <button class="tab-btn" data-page="portfolio-logos.html" onclick="loadPortfolio('portfolio-logos.html', this); return false;">Logos</button>
       <button class="tab-btn" data-page="portfolio-movie.html" onclick="loadPortfolio('portfolio-movie.html', this); return false;">Publication Design</button>
       <button class="tab-btn" data-page="portfolio-futuristic.html" onclick="loadPortfolio('portfolio-futuristic.html', this); return false;">Photo Manipulation</button>
-      <button class="tab-btn" data-page="portfolio-blender.html" onclick="loadPortfolio('portfolio-blender.html', this); return false;">3D</button>
+      <button class="tab-btn" data-page="Apparel & Merchandise.html" onclick="loadPortfolio('Apparel & Merchandise.html', this); return false;">Apparel & Merchandise</button>
     </div>
 
     <div id="portfolio-content" class="portfolio-content">
@@ -540,79 +540,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
           <div class="portfolio-item">
-            <a href="#" onclick="loadPortfolio('portfolio-blender.html'); return false;">
-              <img class="img-primary" src="assets/3DCOVER.png" alt="3D Blender">
-              <img class="img-hover" src="assets/REN1.png" alt="3D Blender Hover">
-              <!-- <div class="overlay">3D Blender</div>-->
+            <a href="#" onclick="loadPortfolio('Apparel & Merchandise.html'); return false;">
+              <img class="img-primary" src="assets/MERCHANDISECOVER.png" alt="Apparel & Merchandise">
+              <img class="img-hover" src="assets/JERSEY.png" alt="Apparel & Merchandise Hover">
+              <!-- <div class="overlay">Apparel & Merchandise</div>-->
             </a>
           </div>
-        </div>
+        </div> 
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- REEL
-  🎬 Watch All My Works Section 
-<section class="reel-section text-center mt-5 pb-5" data-aos="fade-up">
-  <h5 class="fw-bold text-white mb-3">
-    🎥 Watch All My Works in One Reel
-  </h5>
 
-  <div class="reel-wrapper mx-auto">
-    <div class="video-wrapper">
-      <img src="assets/REN2.png"
-           alt="All Works Reel"
-           class="video-thumb"
-           data-drive="1H1RI956a3X0VKY030ThrJTH5i8_T9esz">
-      <span class="play-icon"></span>
-    </div>
-  </div>
-</section>
-
- -->
 
 <!--  Styles -->
 <style>/*
-.reel-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.reel-wrapper {
-  position: relative;
-  width: 60%;
-  max-width: 600px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.reel-wrapper:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-}
-
-.video-thumb {
-  width: 100%;
-  display: block;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.play-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  color: white;
-  opacity: 0.8;
-  pointer-events: none;
-}
 
 /* Overlay background */
 .video-modal {
@@ -818,48 +762,8 @@ document.addEventListener("DOMContentLoaded", () => {
   <span class="modal-next" id="modalNext">›</span>
 </div>
 
-<!-- 🔹 Video Modal
-  
-<div id="videoModal" class="video-modal">
-   Close button outside - 
-  <span class="close-btn" id="closeModal">&times;</span>
 
-    Correct container name - 
-  <div class="video-modal-content">
-    <iframe id="videoFrame" src="" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
 
- -->
-
-<script>
-//  document.addEventListener("DOMContentLoaded", () => {
-//    const videoThumb = document.querySelector(".video-thumb");
-//    const videoModal = document.getElementById("videoModal");
-//    const closeModal = document.getElementById("closeModal");
-//    const videoFrame = document.getElementById("videoFrame");
-
-//    videoThumb.addEventListener("click", () => {
-//      const embedUrl = `https://drive.google.com/file/d/${driveId}/preview`;
-//      videoModal.style.display = "flex";
- //     document.body.style.overflow = "hidden"; // disable scroll
-//    });
-
-//    closeModal.addEventListener("click", () => {
-//      videoModal.style.display = "none";
-//      videoFrame.src = "";
-//      document.body.style.overflow = "auto"; // restore scroll
- //   });
-
-//    window.addEventListener("click", (e) => {
-//      if (e.target === videoModal) {
-//        videoModal.style.display = "none";
-//        videoFrame.src = "";
-//        document.body.style.overflow = "auto";
- //     }
-//    });
-//  });
-</script>
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section bg-black text-white py-5 ">
