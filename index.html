@@ -198,7 +198,7 @@ section[id] {
 
 
 <!-- Hero Section -->
-<section id="home" class="hero-section">
+<section id="home" class="hero-section" style="margin-top: 1rem;">
   <!-- Video Background -->
   <video autoplay muted loop playsinline class="hero-video">
     <source src="assets/hero-bg.mp4" type="video/mp4">
@@ -774,26 +774,29 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="row align-items-start border-top border-light py-5 gx-3 gx-md-4">
        
       <!-- Left side -->
-      <div class="col-12 col-md-6 mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="fw-bold text-start mb-5">Connect to discuss your <br> project needs.</h2>
-        <ul class="list-unstyled">
-          <li class="mb-3 d-flex align-items-center">
-            <i class="bi bi-geo-alt-fill me-3 fs-5"></i>
-            Santa Rosa Laguna, Philippines
+      <div class="col-12 col-md-6 mb-4 mb-md-0 order-2 order-md-1" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="fw-bold text-start mb-5" style="margin-top: 2rem;">Connect to discuss your <br> project needs.</h2>
+        <ul class="list-unstyled contact-info-list">
+          <li class="mb-3 d-flex align-items-start contact-info-item">
+            <span class="contact-icon me-3 flex-shrink-0">
+              <i class="bi bi-geo-alt-fill fs-5"></i>
+            </span>
+            <span class="contact-text">Santa Rosa Laguna, Philippines</span>
           </li>
-          <li class="mb-3 d-flex align-items-center">
-            <i class="bi bi-telephone-fill me-3 fs-5"></i>
-            +639682658498
+          <li class="mb-3 d-flex align-items-start contact-info-item">
+            <span class="contact-icon me-3 flex-shrink-0">
+              <i class="bi bi-telephone-fill fs-5"></i>
+            </span>
+            <span class="contact-text">+639682658498</span>
           </li>
-         <li class="mb-3 d-flex align-items-center">
-                  
-          <i class="bi bi-envelope-fill me-3 fs-5"></i>
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jnathanmendez09@gmail.com" target="_blank" class="text-white text-decoration-none">
-            jnathanmendez09@gmail.com
-          </a>
-        </li>
-
-
+          <li class="mb-3 d-flex align-items-start contact-info-item">
+            <span class="contact-icon me-3 flex-shrink-0">
+              <i class="bi bi-envelope-fill fs-5"></i>
+            </span>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jnathanmendez09@gmail.com" target="_blank" class="text-white text-decoration-none contact-text">
+              jnathanmendez09@gmail.com
+            </a>
+          </li>
         </ul>
 
        <!-- Social icons -->
@@ -806,7 +809,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
      <!-- Right side (Form) -->
-<div class="col-12 col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+<div class="col-12 col-md-6 order-1 order-md-2 mb-4 mb-md-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
   <h5 class="mb-4 text-start fw-bold" style="font-size: 2rem;">Get in Touch</h5>
   
   <form id="contact-form" onsubmit="sendContactForm(event)">
@@ -885,7 +888,7 @@ ul li a {
 
 ul li a:hover {
   color: #00d0ff; /* cyan on hover */
-  text-decoration: ;
+  text-decoration: none;
 }
 
   /* Social icons hover */
