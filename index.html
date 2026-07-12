@@ -474,11 +474,12 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="portfolio-tabs">
       <button class="tab-btn active" data-page="all" onclick="loadPortfolio('all', this); return false;">All</button>
       <button class="tab-btn" data-page="portfolio-ads.html" onclick="loadPortfolio('portfolio-ads.html', this); return false;">Advertisement</button>
-      <button class="tab-btn" data-page="portfolio-sports.html" onclick="loadPortfolio('portfolio-sports.html', this); return false;">Sports</button>
+      <button class="tab-btn" data-page="apparel-merchandise.html" onclick="loadPortfolio('apparel-merchandise.html', this); return false;">Apparel & Merchandise</button>
       <button class="tab-btn" data-page="portfolio-logos.html" onclick="loadPortfolio('portfolio-logos.html', this); return false;">Logos</button>
       <button class="tab-btn" data-page="portfolio-movie.html" onclick="loadPortfolio('portfolio-movie.html', this); return false;">Publication Design</button>
+      <button class="tab-btn" data-page="portfolio-sports.html" onclick="loadPortfolio('portfolio-sports.html', this); return false;">Sports</button>    
       <button class="tab-btn" data-page="portfolio-futuristic.html" onclick="loadPortfolio('portfolio-futuristic.html', this); return false;">Photo Manipulation</button>
-      <button class="tab-btn" data-page="apparel-merchandise.html" onclick="loadPortfolio('apparel-merchandise.html', this); return false;">Apparel & Merchandise</button>
+     
     </div>
 
     <div id="portfolio-content" class="portfolio-content">
@@ -494,17 +495,27 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
-        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+         <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
           <div class="portfolio-item">
-            <a href="#" onclick="loadPortfolio('portfolio-sports.html'); return false;">
-              <img class="img-primary" src="assets/SPORTSCOVER.png" alt="Sports Promotion">
-              <img class="img-hover" src="assets/STEPCURRY.png" alt="Sports Promotion Hover">
-              <!-- <div class="overlay">Sports and Fitness Promotion</div>-->
+            <a href="#" onclick="loadPortfolio('apparel-merchandise.html'); return false;">
+              <img class="img-primary" src="assets/MERCHANDISECOVER.png" alt="Apparel & Merchandise">
+              <img class="img-hover" src="assets/MERCOVER.png" alt="Apparel & Merchandise Hover">
+              <!-- <div class="overlay">Apparel & Merchandise</div>-->
+            </a>
+          </div>
+        </div> 
+
+         <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-item">
+            <a href="#" onclick="loadPortfolio('portfolio-logos.html'); return false;">
+              <img class="img-primary" src="assets/LOGOCOVER.png" alt="Logos">
+              <img class="img-hover" src="assets/DZHOVER.png" alt="Logos Hover">
+              <!--<div class="overlay">Artistic Logos and Designs</div>-->
             </a>
           </div>
         </div>
 
-        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
+         <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="portfolio-item">
             <a href="#" onclick="loadPortfolio('portfolio-movie.html'); return false;">
               <img class="img-primary" src="assets/MOVIECOVERRR.png" alt="Movie Posters">
@@ -514,12 +525,12 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
 
-        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up" data-aos-delay="100">
           <div class="portfolio-item">
-            <a href="#" onclick="loadPortfolio('portfolio-logos.html'); return false;">
-              <img class="img-primary" src="assets/LOGOCOVER.png" alt="Logos">
-              <img class="img-hover" src="assets/DZHOVER.png" alt="Logos Hover">
-              <!--<div class="overlay">Artistic Logos and Designs</div>-->
+            <a href="#" onclick="loadPortfolio('portfolio-sports.html'); return false;">
+              <img class="img-primary" src="assets/SPORTSCOVER.png" alt="Sports Promotion">
+              <img class="img-hover" src="assets/STEPCURRY.png" alt="Sports Promotion Hover">
+              <!-- <div class="overlay">Sports and Fitness Promotion</div>-->
             </a>
           </div>
         </div>
@@ -538,15 +549,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-        <div class="col-6 col-sm-6 col-md-4" data-aos="fade-up">
-          <div class="portfolio-item">
-            <a href="#" onclick="loadPortfolio('apparel-merchandise.html'); return false;">
-              <img class="img-primary" src="assets/MERCHANDISECOVER.png" alt="Apparel & Merchandise">
-              <img class="img-hover" src="assets/MERCOVER.png" alt="Apparel & Merchandise Hover">
-              <!-- <div class="overlay">Apparel & Merchandise</div>-->
-            </a>
-          </div>
-        </div> 
+       
 
       </div>
     </div>
